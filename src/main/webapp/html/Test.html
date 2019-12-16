@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="https://cdn.bootcss.com/material-design-icons/3.0.1/iconfont/material-icons.css" rel="stylesheet">
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            /*display: flex;*/
+        }
+
+        #div-nav {
+            position: absolute;
+            background: white;
+            padding: 5px;
+            width: 60px;
+            transition: width 0.5s;
+        }
+
+        #div-nav a {
+            display: block;
+            color: #000;
+            text-decoration: none;
+        }
+        #div-nav span {
+            display: none;
+        }
+        #div-nav:hover {
+            width: 200px;
+        }
+        #div-nav:hover ul {
+            width: 200px;
+        }
+        #div-nav:hover span{
+            display: inline;
+        }
+
+        #div-nav i {
+            padding: 15px;
+            vertical-align: middle;
+        }
+
+        #div-nav a:hover {
+            background: #c3c3c3;
+        }
+
+
+    </style>
+</head>
+<body>
+<div class="container">
+    <div id="div-nav">
+        <ul>
+            <li><a href=""><i class="material-icons">dashboard</i><span>Dashboard</span></a></li>
+            <li><a href=""><i class="material-icons">desktop_mac</i><span>computer</span></a></li>
+            <li><a href=""><i class="material-icons">timelapse</i><span>timelapse</span></a></li>
+            <li><a href=""><i class="material-icons">style</i><span>style</span></a></li>
+            <li><a href=""><i class="material-icons">dialpad</i><span>dialpad</span></a></li>
+        </ul>
+
+    </div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+<!--    <meta http-equiv="Content-Type"  charset="utf-8">-->
+    <title>用户登陆</title>
+
+    <link rel="stylesheet" href="../../css/theme.css">
+
+    <style>
+
+
+        #login-contnent {
+            background: url("../../resources/imges/login.jpg");
+
+            text-align: center;
+            width: 1550px;
+            padding: 80px 500px 100px 500px;
+
+        }
+
+        .container h2 {
+            padding: 10px;
+            color: aquamarine;
+        }
+
+        .form-group {
+            position: relative;
+            padding: 15px;
+        }
+        .form-group input {
+            width: 100%;
+            border: none;
+            outline: none;
+            border-bottom: 2px solid #61e1ff;
+            padding: 10px;
+            margin-bottom: 15px;
+            color: aqua;
+            font-size: 20px;
+
+            background: url("../../resources/imges/login.jpg");
+        }
+
+        /* pointer-events，元素重叠，或元素被透明元素遮挡，为遮挡元素添加属性，可使其指针事件无效 */
+        .form-group label {
+            position: absolute;
+            padding: 10px;
+            pointer-events: none;
+            top: 5px;
+            left: 0;
+            transition: 0.5s;
+            color: #73eeff;
+        }
+        .form-group input:focus {
+            border-bottom: 2px solid #73eeff;
+        }
+        /* 输入框获得焦点，输入框校验成功，input之后的全部label */
+        .form-group input:focus + label,
+        .form-group input:valid + label {
+            top: -10px;
+            color: #fcff07;
+            font-size: 0.5em;
+            font-weight: bold;
+        }
+
+        #button{
+            color: green;
+            background: aquamarine;
+            padding: 10px 20px 30px 20px;
+            border-radius: 5px;
+            width: 200px;
+            height: 35px;
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+
+    </style>
+
+
+</head>
+
+<body>
+
+
+<div class="container">
+
+    <header>
+        <div class="logo"><a href="/index">
+            <img src="../../resources/imges/iceclogo.png" alt>
+            <img src="../../resources/imges/logo-name.png" alt>
+        </a>
+        </div>
+
+
+    </header>
+
+    <nav class="area">
+        <ul>
+
+            <li><a href="/index">网站首页</a></li>
+
+            <li id="li-1"><a href="#">专业介绍</a>
+
+                <div id="area-1" class="c-area-1">
+                    <ul id="area-1-1" class="c-area-2">
+                        <li><a href="../../html/Introducation/IntroducationIn.html">专业简介</a></li>
+                        <li><a href="../../html/Introducation/IntroducationDirection.html">专业方向</a></li>
+                    </ul>
+
+                </div>
+            </li>
+
+
+            <li id="li-2"><a href="#">教师队伍</a>
+                <div id="area-2" class="c-area-1">
+                    <ul id="area-2-1" class="c-area-2">
+                        <li><a href="../../html/Teacher/TeacherMien.html">教师风采</a></li>
+                        <li><a href="../../html/Teacher/TeacherIntroducation.html">教师介绍</a></li>
+                    </ul>
+
+                </div>
+            </li>
+
+            <li id="li-3"><a href="#">实验教室</a>
+                <div id="area-3" class="c-area-1">
+                    <ul id="area-3-1" class="c-area-2">
+                        <li><a href="../../html/lab/923.html">923实验室</a></li>
+                        <li><a href="../../html/lab/925.html">925实验室</a></li>
+                    </ul>
+                </div>
+            </li>
+
+            <li id="li-4"><a href="#">关于我们</a>
+                <div id="area-4" class="c-area-1">
+                    <ul id="area-4-1" class="c-area-2">
+                        <li><a href="../../html/MyOwn.html">开发介绍</a></li>
+                    </ul>
+                </div>
+            </li>
+
+            <li id="li-5"><a href="#">用户登陆</a></li>
+
+        </ul>
+
+    </nav>
+    <div id="login-contnent">
+        <h2>登录</h2>
+        <form  action="/login" method="post">
+            <div class="form-group">
+                <input type="text" required>
+                <label>学号*</label>
+            </div>
+            <div class="form-group">
+                <input type="password" required>
+                <label>密码*</label>
+            </div>
+            <button type="submit" id="button">登陆</button>
+        </form>
+
+    </div>
+
+
+    <footer class="area" id="footer">
+
+        <pre>
+
+            联系我们
+
+        微博：111111111111  微信：11111111111  电话：111111111111  邮箱：111111111111.com
+
+        东北林业大学
+
+        软件工程专业 2019&copy;
+        </pre>
+
+    </footer>
+</div>
+
+<script src="../../js/theme.js"></script>
+<script src="../../js/jquery-3.4.1.min.js"></script>
+<script>
+    themeNav();
+
+</script>
+
+</body>
+</html>

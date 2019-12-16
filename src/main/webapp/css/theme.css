@@ -1,0 +1,150 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#headerNav {
+    /*display: block;*/
+    position: absolute;
+    width: 100%;
+    height: 20px;
+    /*margin:  0 100px 0 0;*/
+    /*border: 2px solid red;*/
+}
+
+/*以下两部分帮助将底部footer始终置于页面底部了*/
+#container {
+    min-height: 100%;
+    height: 100%;
+    position: relative;
+}
+
+#footer {
+    text-align: center;
+    font-weight: bold;
+    font-family: "Microsoft YaHei", "微软雅黑", "宋体", monospace;
+    font-size: 14px;
+    bottom: 0;
+    /*position:absolute;*/
+    width: 100%;
+    height: 130px; /*脚部的高度*/
+    clear: both;
+    /*margin-top: 1px;*/
+}
+
+
+/*设置颜色，便于查看不同区域的范围,同时为布局区分作准备*/
+
+
+header {
+
+    grid-area: header;
+    /*background-color: #ff4125;*/
+
+}
+
+nav {
+    grid-area: nav;
+    background-color: #7fffd4;
+}
+
+footer {
+    grid-area: footer;
+    /*background-color: chartreuse;*/
+    background: url("../resources/imges/foot.jpg");
+}
+
+section {
+    grid-area: section;
+    background-color: darkkhaki;
+}
+
+article {
+    grid-area: article;
+    /*background-color: deeppink;*/
+background: url("");
+}
+
+aside {
+    grid-area: aside;
+    background-color: orange;
+}
+
+article {
+    grid-area: article;
+    background: url("../resources/imges/art.jpg");
+}
+
+/*布局的规划*/
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "header header" "nav nav" "section section" "article aside" "footer footer";
+}
+
+/*确定标题页面标题*/
+.logo {
+    /*background-color: #ffff81;*/
+    background: url("../resources/imges/building.jpg");
+}
+
+/*导航栏部分相关参数的设定*/
+nav ul {
+    display: flex;
+    list-style-type: none;
+    justify-content: center;
+}
+
+
+nav a {
+    display: block;
+    text-decoration: none;
+    color: black;
+    padding: 15px 65px;
+
+    /*transition-property: background,color;*/
+    /*transition-duration: 1s,0.5s;*/
+}
+
+nav ul li a:hover {
+    color: white;
+    background-color: #0e20ff;
+}
+
+.c-area-1 {
+    display: none;
+    position: absolute;
+    z-index: 10;
+    background-color: #7fffd4;
+    border-bottom-right-radius: 8px;
+    border-bottom-left-radius: 8px;
+}
+
+.c-area-2 {
+    display: block;
+    text-align: center;
+    font-size: 90%;
+
+}
+
+.c-area-2 li {
+
+    display: block;
+
+    transition: transform 0.5s;
+}
+
+
+.c-area-2 li :hover {
+    color: white;
+    background-color: #4557ff;
+    transform: scale(1.1, 1.1);
+    border-radius: 6px;
+}
+
+
+#footer{
+    background-image: url("../resources/imges/xinwen.jpg");
+    background-size: 100% 100%;
+}
